@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEONBUK KOREYS TILI MAKTABI - Koreys Tili O'rganish Markazi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="JEONBUK Koreys Tili Maktabi - Koreys tilini noldan o'rganing. TOPIK 1 va TOPIK 2 tayyorlash kurslari. Soule Hangugo kitobidan darslar.">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button onclick="switchLanguage('uz')" class="lang-btn active" id="uz-btn">O'Z</button>
+        <button onclick="switchLanguage('ko')" class="lang-btn" id="ko-btn">한국어</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.png" alt="JEONBUK Logo" class="logo">
+                <span class="logo-text">JEONBUK</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" data-uz="Bosh sahifa" data-ko="홈">Bosh sahifa</a></li>
+                <li><a href="#about" data-uz="Biz haqimizda" data-ko="소개">Biz haqimizda</a></li>
+                <li><a href="#courses" data-uz="Kurslar" data-ko="코스">Kurslar</a></li>
+                <li><a href="#videos" data-uz="Videolar" data-ko="비디오">Videolar</a></li>
+                <li><a href="#contact" data-uz="Aloqa" data-ko="연락처">Aloqa</a></li>
+                <li><a href="#register" class="register-btn" onclick="openRegistrationModal()" data-uz="Ro'yxatdan o'tish" data-ko="등록">Ro'yxatdan o'tish</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span data-uz="JEONBUK KOREYS TILI MAKTABI" data-ko="전북 한국어 학교">JEONBUK KOREYS TILI MAKTABI</span>
+                </h1>
+                <p class="hero-subtitle" data-uz="Koreys tilini noldan professional darajagacha o'rganing" data-ko="한국어를 기초부터 전문 수준까지 배우세요">
+                    Koreys tilini noldan professional darajagacha o'rganing
+                </p>
+                <div class="hero-features">
+                    <div class="feature">
+                        <span class="feature-icon">📚</span>
+                        <span data-uz="Soule Hangugo kitobidan" data-ko="서울 한국어 교재로">Soule Hangugo kitobidan</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">🎯</span>
+                        <span data-uz="TOPIK 1 & 2 tayyorlash" data-ko="TOPIK 1 & 2 준비">TOPIK 1 & 2 tayyorlash</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">💻</span>
+                        <span data-uz="Online darslar" data-ko="온라인 수업">Online darslar</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">🏆</span>
+                        <span data-uz="Sertifikat berish" data-ko="수료증 발급">Sertifikat berish</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="openRegistrationModal()" data-uz="Hoziroq boshlash" data-ko="지금 시작하기">
+                        Hoziroq boshlash
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('about')" data-uz="Batafsil ma'lumot" data-ko="자세히 보기">
+                        Batafsil ma'lumot
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-illustration">
+                    <div class="student-avatar"></div>
+                    <div class="books-stack"></div>
+                    <div class="korean-flag"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-uz="Biz haqimizda" data-ko="소개">Biz haqimizda</h2>
+                <p data-uz="2020-yilda tashkil etilgan zamonaviy koreys tili maktabi" data-ko="2020년에 설립된 현대적인 한국어 학교">
+                    2020-yilda tashkil etilgan zamonaviy koreys tili maktabi
+                </p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 data-uz="Nima uchun aynan biz?" data-ko="왜 저희를 선택해야 할까요?">Nima uchun aynan biz?</h3>
+                    <ul class="about-list">
+                        <li data-uz="Soule Hangugo kitobidan professional darslar" data-ko="서울 한국어 교재로 전문적인 수업">
+                            Soule Hangugo kitobidan professional darslar
+                        </li>
+                        <li data-uz="TOPIK 1 va TOPIK 2 imtihonlariga tayyorlash" data-ko="TOPIK 1과 TOPIK 2 시험 준비">
+                            TOPIK 1 va TOPIK 2 imtihonlariga tayyorlash
+                        </li>
+                        <li data-uz="Noldan boshlovchilar uchun maxsus dastur" data-ko="초보자를 위한 특별 프로그램">
+                            Noldan boshlovchilar uchun maxsus dastur
+                        </li>
+                        <li data-uz="Online ZOOM orqali interaktiv darslar" data-ko="ZOOM을 통한 온라인 대화형 수업">
+                            Online ZOOM orqali interaktiv darslar
+                        </li>
+                        <li data-uz="Kurs tugagach rasmiy sertifikat berish" data-ko="코스 완료 후 공식 수료증 발급">
+                            Kurs tugagach rasmiy sertifikat berish
+                        </li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">2020</div>
+                        <div class="stat-label" data-uz="Tashkil etilgan yil" data-ko="설립 연도">Tashkil etilgan yil</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label" data-uz="Muvaffaqiyatli o'quvchilar" data-ko="성공한 학생들">Muvaffaqiyatli o'quvchilar</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label" data-uz="TOPIK darajalari" data-ko="TOPIK 레벨">TOPIK darajalari</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-uz="Bizning kurslarimiz" data-ko="우리의 코스">Bizning kurslarimiz</h2>
+                <p data-uz="Har bir daraja uchun maxsus ishlab chiqilgan dasturlar" data-ko="각 레벨을 위해 특별히 개발된 프로그램">
+                    Har bir daraja uchun maxsus ishlab chiqilgan dasturlar
+                </p>
+            </div>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-icon">📚</div>
+                    <h3 data-uz="TOPIK 1 tayyorlash" data-ko="TOPIK 1 준비">TOPIK 1 tayyorlash</h3>
+                    <p data-uz="Boshlang'ich va o'rta daraja uchun" data-ko="초급 및 중급을 위한">Boshlang'ich va o'rta daraja uchun</p>
+                    <ul>
+                        <li data-uz="Asosiy grammatika" data-ko="기본 문법">Asosiy grammatika</li>
+                        <li data-uz="So'z boyligi" data-ko="어휘력">So'z boyligi</li>
+                        <li data-uz="Eshitish va o'qish" data-ko="듣기와 읽기">Eshitish va o'qish</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="openRegistrationModal('topik1')" data-uz="Kursga yozilish" data-ko="코스 등록">
+                        Kursga yozilish
+                    </button>
+                </div>
+                <div class="course-card featured">
+                    <div class="course-badge" data-uz="Mashhur" data-ko="인기">Mashhur</div>
+                    <div class="course-icon">🎯</div>
+                    <h3 data-uz="TOPIK 2 tayyorlash" data-ko="TOPIK 2 준비">TOPIK 2 tayyorlash</h3>
+                    <p data-uz="O'rta va yuqori daraja uchun" data-ko="중급 및 고급을 위한">O'rta va yuqori daraja uchun</p>
+                    <ul>
+                        <li data-uz="Murakkab grammatika" data-ko="복잡한 문법">Murakkab grammatika</li>
+                        <li data-uz="Yozish ko'nikmalari" data-ko="쓰기 기술">Yozish ko'nikmalari</li>
+                        <li data-uz="Professional lug'at" data-ko="전문 어휘">Professional lug'at</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="openRegistrationModal('topik2')" data-uz="Kursga yozilish" data-ko="코스 등록">
+                        Kursga yozilish
+                    </button>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">🌟</div>
+                    <h3 data-uz="Noldan boshlash" data-ko="기초부터 시작">Noldan boshlash</h3>
+                    <p data-uz="Mutlaqo yangi boshlovchilar uchun" data-ko="완전 초보자를 위한">Mutlaqo yangi boshlovchilar uchun</p>
+                    <ul>
+                        <li data-uz="Koreya alifbosi" data-ko="한글 알파벳">Koreya alifbosi</li>
+                        <li data-uz="Asosiy iboralar" data-ko="기본 표현">Asosiy iboralar</li>
+                        <li data-uz="Kundalik suhbat" data-ko="일상 대화">Kundalik suhbat</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="openRegistrationModal('beginner')" data-uz="Kursga yozilish" data-ko="코스 등록">
+                        Kursga yozilish
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="videos">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-uz="Bepul video darslar" data-ko="무료 비디오 강의">Bepul video darslar</h2>
+                <p data-uz="YouTube kanalimizdan eng yaxshi darslar" data-ko="YouTube 채널의 최고 강의">
+                    YouTube kanalimizdan eng yaxshi darslar
+                </p>
+            </div>
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.youtube.com/embed/ClOoshuwvUI" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 data-uz="TOPIK 1 Master Class" data-ko="TOPIK 1 마스터 클래스">TOPIK 1 Master Class</h3>
+                        <p data-uz="Boshlang'ich daraja uchun to'liq kurs" data-ko="초급을 위한 완전한 코스">
+                            Boshlang'ich daraja uchun to'liq kurs
+                        </p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.youtube.com/embed/dvALk2KFyi4" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 data-uz="TOPIK 2 Master Class" data-ko="TOPIK 2 마스터 클래스">TOPIK 2 Master Class</h3>
+                        <p data-uz="Yuqori daraja uchun professional tayyorlash" data-ko="고급을 위한 전문 준비">
+                            Yuqori daraja uchun professional tayyorlash
+                        </p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.youtube.com/embed/5plMHt19H2w" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 data-uz="TOPIK daraja olish uchun qancha vaqt kerak?" data-ko="TOPIK 레벨을 얻는 데 얼마나 걸리나요?">
+                            TOPIK daraja olish uchun qancha vaqt kerak?
+                        </h3>
+                        <p data-uz="Foydali maslahatlar va yo'l xaritasi" data-ko="유용한 팁과 로드맵">
+                            Foydali maslahatlar va yo'l xaritasi
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-cta">
+                <a href="https://www.youtube.com/@JEONBUK_Koreys_Tili_Maktabi" target="_blank" class="btn btn-primary">
+                    <span data-uz="YouTube kanalimizga obuna bo'ling" data-ko="YouTube 채널 구독">YouTube kanalimizga obuna bo'ling</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Section -->
+    <section class="certificate">
+        <div class="container">
+            <div class="certificate-content">
+                <div class="certificate-text">
+                    <h2 data-uz="Rasmiy sertifikat oling" data-ko="공식 수료증 받기">Rasmiy sertifikat oling</h2>
+                    <p data-uz="Kurs muvaffaqiyatli tugagach, rasmiy sertifikat bilan taqdirlanasiz" data-ko="코스를 성공적으로 완료하면 공식 수료증을 받게 됩니다">
+                        Kurs muvaffaqiyatli tugagach, rasmiy sertifikat bilan taqdirlanasiz
+                    </p>
+                    <ul>
+                        <li data-uz="Xalqaro tan olingan sertifikat" data-ko="국제적으로 인정받는 수료증">Xalqaro tan olingan sertifikat</li>
+                        <li data-uz="Raqamli va qog'oz nusxalari" data-ko="디지털 및 종이 사본">Raqamli va qog'oz nusxalari</li>
+                        <li data-uz="LinkedIn profilingizga qo'shing" data-ko="LinkedIn 프로필에 추가">LinkedIn profilingizga qo'shing</li>
+                    </ul>
+                </div>
+                <div class="certificate-image">
+                    <img src="certificate.png" alt="JEONBUK Certificate" class="certificate-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-uz="Biz bilan bog'laning" data-ko="연락하기">Biz bilan bog'laning</h2>
+                <p data-uz="Savollaringiz bormi? Biz doimo yordam berishga tayyormiz!" data-ko="질문이 있으신가요? 언제든지 도움을 드릴 준비가 되어 있습니다!">
+                    Savollaringiz bormi? Biz doimo yordam berishga tayyormiz!
+                </p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <h3 data-uz="Telefon raqamlar" data-ko="전화번호">Telefon raqamlar</h3>
+                            <p>+998 94 039 99 40</p>
+                            <p>+998 93 672 07 67</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-details">
+                            <h3 data-uz="Telegram adminlar" data-ko="텔레그램 관리자">Telegram adminlar</h3>
+                            <p><a href="https://t.me/JEONBUK_KTM_ADMIN_2" target="_blank">@JEONBUK_KTM_ADMIN_2</a></p>
+                            <p><a href="https://t.me/JEONBUK_KTM_ADMIN" target="_blank">@JEONBUK_KTM_ADMIN</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🌐</div>
+                        <div class="contact-details">
+                            <h3 data-uz="Ijtimoiy tarmoqlar" data-ko="소셜 미디어">Ijtimoiy tarmoqlar</h3>
+                            <div class="social-links">
+                                <a href="https://t.me/JEONBUK_KOREYS_TILI_MAKTABI" target="_blank" class="social-link telegram">
+                                    Telegram kanal
+                                </a>
+                                <a href="https://www.instagram.com/jeonbuk_koreys_tili_maktabi/" target="_blank" class="social-link instagram">
+                                    Instagram
+                                </a>
+                                <a href="https://www.youtube.com/@JEONBUK_Koreys_Tili_Maktabi" target="_blank" class="social-link youtube">
+                                    YouTube
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3 data-uz="Tezkor aloqa" data-ko="빠른 연락">Tezkor aloqa</h3>
+                    <form id="quickContactForm">
+                        <input type="text" name="fullName" placeholder="Ismingiz / 이름" required>
+                        <input type="tel" name="phone" placeholder="Telefon raqam / 전화번호" required>
+                        <textarea name="message" placeholder="Xabaringiz / 메시지" rows="4" required></textarea>
+                        <button type="submit" class="btn btn-primary" data-uz="Xabar yuborish" data-ko="메시지 보내기">
+                            Xabar yuborish
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Modal -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-uz="Kursga ro'yxatdan o'tish" data-ko="코스 등록">Kursga ro'yxatdan o'tish</h2>
+                <span class="close" onclick="closeRegistrationModal()">&times;</span>
+            </div>
+            <form id="registrationForm" class="registration-form">
+                <div class="form-group">
+                    <label data-uz="Ism va familiya" data-ko="성명">Ism va familiya *</label>
+                    <input type="text" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label data-uz="Telefon raqam" data-ko="전화번호">Telefon raqam *</label>
+                    <input type="tel" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label data-uz="Telegram username" data-ko="텔레그램 사용자명">Telegram username *</label>
+                    <input type="text" name="telegram" placeholder="@username" required>
+                </div>
+                <div class="form-group">
+                    <label data-uz="Mamlakat va shahar" data-ko="국가 및 도시">Mamlakat va shahar *</label>
+                    <input type="text" name="location" required>
+                </div>
+                <div class="form-group">
+                    <label data-uz="Ilgari koreys tilini o'rgangan misiz?" data-ko="이전에 한국어를 배운 적이 있나요?">Ilgari koreys tilini o'rgangan misiz? *</label>
+                    <select name="previousStudy" required>
+                        <option value="">Tanlang / 선택하세요</option>
+                        <option value="no" data-uz="Yo'q, birinchi marta" data-ko="아니요, 처음입니다">Yo'q, birinchi marta</option>
+                        <option value="self" data-uz="Ha, mustaqil o'rganganman" data-ko="네, 독학했습니다">Ha, mustaqil o'rganganman</option>
+                        <option value="school" data-uz="Ha, boshqa maktabda o'rganganman" data-ko="네, 다른 학교에서 배웠습니다">Ha, boshqa maktabda o'rganganman</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-uz="Hozirgi til darajangiz" data-ko="현재 언어 수준">Hozirgi til darajangiz *</label>
+                    <select name="level" required>
+                        <option value="">Tanlang / 선택하세요</option>
+                        <option value="beginner" data-uz="Boshlang'ich (0 daraja)" data-ko="초급 (0 레벨)">Boshlang'ich (0 daraja)</option>
+                        <option value="elementary" data-uz="Elementar (1-2 daraja)" data-ko="기초 (1-2 레벨)">Elementar (1-2 daraja)</option>
+                        <option value="intermediate" data-uz="O'rta (3-4 daraja)" data-ko="중급 (3-4 레벨)">O'rta (3-4 daraja)</option>
+                        <option value="advanced" data-uz="Yuqori (5-6 daraja)" data-ko="고급 (5-6 레벨)">Yuqori (5-6 daraja)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-uz="Qaysi kitobdan o'rgangan?" data-ko="어떤 교재로 배웠나요?">Qaysi kitobdan o'rgangan?</label>
+                    <input type="text" name="textbook" placeholder="Kitob nomi / 교재명">
+                </div>
+                <div class="form-group">
+                    <label data-uz="Qaysi kursga yozilmoqchisiz?" data-ko="어떤 코스에 등록하고 싶나요?">Qaysi kursga yozilmoqchisiz? *</label>
+                    <select name="courseType" required>
+                        <option value="">Tanlang / 선택하세요</option>
+                        <option value="topik1" data-uz="TOPIK 1 tayyorlash" data-ko="TOPIK 1 준비">TOPIK 1 tayyorlash</option>
+                        <option value="topik2" data-uz="TOPIK 2 tayyorlash" data-ko="TOPIK 2 준비">TOPIK 2 tayyorlash</option>
+                        <option value="beginner" data-uz="Noldan boshlash" data-ko="기초부터 시작">Noldan boshlash</option>
+                        <option value="conversation" data-uz="Suhbat kursi" data-ko="회화 코스">Suhbat kursi</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-uz="Qo'shimcha ma'lumot" data-ko="추가 정보">Qo'shimcha ma'lumot</label>
+                    <textarea name="description" rows="3" placeholder="Kurs haqida savollaringiz yoki qo'shimcha ma'lumotlar / 코스에 대한 질문이나 추가 정보"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" data-uz="Ro'yxatdan o'tish" data-ko="등록하기">
+                    Ro'yxatdan o'tish
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="nav-logo">
+                        <img src="logo.png" alt="JEONBUK Logo" class="logo">
+                        <span class="logo-text">JEONBUK</span>
+                    </div>
+                    <p data-uz="2020-yilda tashkil etilgan professional koreys tili maktabi. Biz sizga eng yaxshi ta'lim berishga intilamiz." data-ko="2020년에 설립된 전문 한국어 학교. 최고의 교육을 제공하기 위해 노력합니다.">
+                        2020-yilda tashkil etilgan professional koreys tili maktabi. Biz sizga eng yaxshi ta'lim berishga intilamiz.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-uz="Tezkor havolalar" data-ko="빠른 링크">Tezkor havolalar</h3>
+                    <a href="#home" data-uz="Bosh sahifa" data-ko="홈">Bosh sahifa</a>
+                    <a href="#about" data-uz="Biz haqimizda" data-ko="소개">Biz haqimizda</a>
+                    <a href="#courses" data-uz="Kurslar" data-ko="코스">Kurslar</a>
+                    <a href="#videos" data-uz="Videolar" data-ko="비디오">Videolar</a>
+                    <a href="#contact" data-uz="Aloqa" data-ko="연락처">Aloqa</a>
+                </div>
+                <div class="footer-section">
+                    <h3 data-uz="Kurslar" data-ko="코스">Kurslar</h3>
+                    <a href="#" onclick="openRegistrationModal('topik1')" data-uz="TOPIK 1 tayyorlash" data-ko="TOPIK 1 준비">TOPIK 1 tayyorlash</a>
+                    <a href="#" onclick="openRegistrationModal('topik2')" data-uz="TOPIK 2 tayyorlash" data-ko="TOPIK 2 준비">TOPIK 2 tayyorlash</a>
+                    <a href="#" onclick="openRegistrationModal('beginner')" data-uz="Noldan boshlash" data-ko="기초부터 시작">Noldan boshlash</a>
+                    <a href="#" onclick="openRegistrationModal('conversation')" data-uz="Suhbat kursi" data-ko="회화 코스">Suhbat kursi</a>
+                </div>
+                <div class="footer-section">
+                    <h3 data-uz="Aloqa" data-ko="연락처">Aloqa</h3>
+                    <p>📱 +998 94 039 99 40</p>
+                    <p>📱 +998 93 672 07 67</p>
+                    <p>💬 <a href="https://t.me/JEONBUK_KTM_ADMIN" target="_blank">@JEONBUK_KTM_ADMIN</a></p>
+                    <p>💬 <a href="https://t.me/JEONBUK_KTM_ADMIN_2" target="_blank">@JEONBUK_KTM_ADMIN_2</a></p>
+                    <div class="social-links" style="margin-top: 15px;">
+                        <a href="https://t.me/JEONBUK_KOREYS_TILI_MAKTABI" target="_blank" class="social-link telegram">
+                            Telegram
+                        </a>
+                        <a href="https://www.instagram.com/jeonbuk_koreys_tili_maktabi/" target="_blank" class="social-link instagram">
+                            Instagram
+                        </a>
+                        <a href="https://www.youtube.com/@JEONBUK_Koreys_Tili_Maktabi" target="_blank" class="social-link youtube">
+                            YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 JEONBUK KOREYS TILI MAKTABI. <span data-uz="Barcha huquqlar himoyalangan." data-ko="모든 권리 보유.">Barcha huquqlar himoyalangan.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
